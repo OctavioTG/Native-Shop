@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 function BreadDetailScreen() {
   return (
     <View>
-    <Text>BreadDetailScreen</Text>
+    <Text>Detalles</Text>
     </View>
   )
 }

@@ -8,16 +8,24 @@ import BreadDetailScreen from "../screens/BreadDetailScreen/index"
 
 
 
-const BreadNavigation = () =>{
+const BreadNavigation = () => {
   const Stack = createNativeStackNavigator()
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='Home' 
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#fa2e59",
+        },
+        headerTitleAlign: "center"
+      }}>
         <Stack.Screen name='Home' component={CategoriesScreen} />
-        <Stack.Screen name='Bread' component={CategoryBreadScreen}/>
-        <Stack.Screen name='Detail' component={BreadDetailScreen}/>
+        <Stack.Screen name='Bread' component={CategoryBreadScreen} options={({ route }) => ({
+          title: route.params.name,
+        })} />
+        <Stack.Screen name='Detail' component={BreadDetailScreen} options={({ route }) => ({
+          title: route.params.name,
+        })} />
       </Stack.Navigator>
-    </NavigationContainer>
   )
 }
 
