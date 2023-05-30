@@ -21,19 +21,19 @@ const CartScreen = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.list}>
+      <View>
         <FlatList
           data={CART}
           keyExtractor={(item) => item.id}
           renderItem={renderCartItem}
         />
       </View>
-      <View style={styles.footer}>
+      <View>
         <TouchableOpacity
           style={styles.confirm}>
           <Text>Confirmar</Text>
           <View>
-            <Text style={styles.priceText}>Total: $100</Text>
+            <Text style={styles.priceText}>Total: $54</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -47,20 +47,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 12,
-    backgroundColor: "#fff",
-  },
-  list: {
-    flex: 3,
-  },
-  footer: {
-    flex: 1,
-    padding: 12,
-    borderTopColor: "#ccc",
-    borderTopWidth: 1,
   },
   confirm: {
-    backgroundColor: "#ccc",
-    borderRadius: 10,
+    backgroundColor: "grey",
     padding: 10,
     flexDirection: "row",
     alignItems: "center",

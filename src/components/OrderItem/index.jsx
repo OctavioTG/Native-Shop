@@ -13,8 +13,8 @@ const OrderItem = ({ item, onDelete }) => {
   return (
     <View style={styles.order}>
       <View>
-        <Text style={styles.date}>{formatDay(item.date)}</Text>
-        <Text style={styles.total}>Total: {item.total}</Text>
+        <Text>{formatDay(item.date)}</Text>
+        <Text>Total: {item.total}</Text>
       </View>
       <View>
         <TouchableOpacity onPress={() => onDelete(item.id)}>
