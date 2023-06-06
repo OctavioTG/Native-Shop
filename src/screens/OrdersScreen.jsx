@@ -1,9 +1,7 @@
 import { FlatList, StyleSheet, View } from "react-native";
-
 import { ORDERS } from "../data/orders";
 import OrderItem from "../components/OrderItem";
 import React from "react";
-
 const OrdersScreen = () => {
   const handeleDeleteOrder = () => {
     console.log("Eliminar orden");
@@ -11,7 +9,6 @@ const OrdersScreen = () => {
   const renderOrderItem = ({ item }) => (
     <OrderItem item={item} onDelete={handeleDeleteOrder} />
   );
-
   return (
     <View>
       <FlatList
@@ -22,5 +19,4 @@ const OrdersScreen = () => {
     </View>
   );
 };
-
 export default OrdersScreen;

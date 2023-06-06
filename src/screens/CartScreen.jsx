@@ -1,17 +1,12 @@
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { FlatList, StyleSheet, Text, TouchableOpacity, View,} from "react-native";
 
 import { CART } from "../data/cart";
 import CartItem from "../components/CartItem";
 import React from "react";
 
 const CartScreen = () => {
-  const handleDeleteItem = (id) => {
+
+  const handleDeleteItem = id => {
     console.log(id);
   };
 
